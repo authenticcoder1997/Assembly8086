@@ -1,0 +1,23 @@
+.STACK 64
+
+.DATA
+	ANS DB ?
+	
+.CODE
+	MAIN PROC
+		MOV AX, @DATA
+		MOV DS, AX
+		MOV AH, 1
+		INT 21H
+		MOV AL, 5
+		MOV CL, 4
+		MOV BL, AL
+		SUB BL, 1
+		LABEL:
+			MUL BL
+			SUB BL, 1
+			LOOP LABEL
+		MOV ANS, AL
+		END MAIN
+	MAIN ENDP
+			
