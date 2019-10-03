@@ -1,6 +1,7 @@
 .MODEL SMALL
 
-.STACK 100H
+.STACK 64H
+;64H is enough for 64bit system
 
 .DATA 
 	MSG DB "===ADDITION OF TWO NUMBERS=== $" 
